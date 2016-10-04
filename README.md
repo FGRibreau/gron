@@ -19,16 +19,16 @@ Make JSON greppable!
 
 ```
 ▶ curl -s https://jsonplaceholder.typicode.com/users | gron | fgrep "company.name"
-"0.company.name":"Romaguera-Crona",
-"1.company.name":"Deckow-Crist",
-"2.company.name":"Romaguera-Jacobson",
-"3.company.name":"Robel-Corkery",
-"4.company.name":"KeeblerLLC",
-"5.company.name":"Considine-Lockman",
-"6.company.name":"JohnsGroup",
-"7.company.name":"AbernathyGroup",
-"8.company.name":"YostandSons",
-"9.company.name":"HoegerLLC",
+json[0].company.name = "Romaguera-Crona";
+json[1].company.name = "Deckow-Crist";
+json[2].company.name = "Romaguera-Jacobson";
+json[3].company.name = "Robel-Corkery";
+json[4].company.name = "Keebler LLC";
+json[5].company.name = "Considine-Lockman";
+json[6].company.name = "Johns Group";
+json[7].company.name = "Abernathy Group";
+json[8].company.name = "Yost and Sons";
+json[9].company.name = "Hoeger LLC";
 ```
 
 gron can work backwards too, enabling you to turn your filtered data back into JSON:
@@ -36,60 +36,19 @@ gron can work backwards too, enabling you to turn your filtered data back into J
 
 ```
 ▶ curl -s https://jsonplaceholder.typicode.com/users | gron | fgrep "company.name" | ungron
-{
-  "0": {
+[
+  {
     "company": {
       "name": "Romaguera-Crona"
     }
   },
-  "1": {
+  {
     "company": {
       "name": "Deckow-Crist"
     }
   },
   ...
-```
-
-### Usage
-
-Get JSON from a file:
-
-```
-▶ cat testdata/two.json | gron
-"name":"FGRibreau",
-"github":"https://github.com/fgribreau/",
-"likes.0":"code",
-"likes.1":"cheese",
-"likes.2":"meat",
-"contact.email":"github@fgribreau.com",
-"contact.twitter":"@FGRibreau"
-```
-
-From a URL:
-
-```
-▶ curl -s http://headers.jsontest.com/ | gron
-"X-Cloud-Trace-Context":"b6d337804e0580c0afb5660041b23c2f/12840214282269023716",
-"Host":"headers.jsontest.com",
-"User-Agent":"curl/7.43.0",
-"Accept":"*/*"
-```
-
-Grep for something and easily see the path to it:
-
-```
-▶ cat testdata/two.json | gron
-"contact.twitter":"@FGRibreau"
-```
-
-gron makes diffing JSON easy too:
-
-```
-▶ diff <(cat two.json | gron) <(cat two-b.json | gron)
-7c7
-< "contact.twitter":"@FGRibreau"
----
-> "contact.twitter":"@fgribreau"
+  ...
 ```
 
 
@@ -99,15 +58,122 @@ Install with [npm](https://npmjs.org/package/gron).
 
     npm install -g gron
 
+### Usage
+
+Get JSON from a file:
+
+```
+▶ cat testdata/two.json | gron
+json = {};
+json.name = "FGRibreau";
+json.github = "https://github.com/fgribreau/";
+json.likes = [];
+json.likes[0] = "code";
+json.likes[1] = "cheese";
+json.likes[2] = "meat";
+json.contact = {};
+json.contact.email = "github@fgribreau.com";
+json.contact.twitter = "@FGRibreau";
+```
+
+From a URL:
+
+```
+▶ curl -s http://headers.jsontest.com/ | gron
+json = {};
+json.X-Cloud-Trace-Context = "e6bb50fada05a9f8152091463863382a/4805449055235230110";
+json.Host = "headers.jsontest.com";
+json.User-Agent = "curl/7.43.0";
+json.Accept = "*/*";
+```
+
+Grep for something and easily see the path to it:
+
+```
+▶ cat testdata/two.json | gron | grep twitter
+json.contact.twitter = "@FGRibreau";
+```
+
+gron makes diffing JSON easy too:
+
+```
+▶ diff <(cat two.json | gron) <(cat two-b.json | gron)
+10c10
+< json.contact.twitter = "@FGRibreau";
+---
+> json.contact.twitter = "@fgribreau";
+```
+
+The output of gron is valid JavaScript:
+
+```
+▶ cat testdata/two.json | gron > tmp.js
+▶ echo "console.log(json);" >> tmp.js
+▶ nodejs tmp.js
+{ name: 'FGRibreau',
+  github: 'https://github.com/fgribreau/',
+  likes: [ 'code', 'cheese', 'meat' ],
+  contact: { email: 'github@fgribreau.com', twitter: '@FGRibreau' } }
+```
+
+## ungronning
+
+gron can also turn its output back into JSON:
+
+```
+▶ cat testdata/two.json | gron | ungron
+{
+  "name": "FGRibreau",
+  "github": "https://github.com/fgribreau/",
+  "likes": [
+    "code",
+    "cheese",
+    "meat"
+  ],
+  "contact": {
+    "email": "github@fgribreau.com",
+    "twitter": "@FGRibreau"
+  }
+}
+```
+
+This means you use can use gron with grep and other tools to modify JSON:
+
+```
+▶ cat testdata/two.json | gron | grep likes | ungron
+{
+  "likes": [
+    "code",
+    "cheese",
+    "meat"
+  ]
+}
+```
+
+To preserve array keys, arrays are padded with null when values are missing:
+
+```
+▶ cat testdata/two.json | gron | grep likes | grep -v cheese
+json.likes = [];
+json.likes[0] = "code";
+json.likes[2] = "meat";
+▶ cat testdata/two.json | gron | grep likes | grep -v cheese | ungron
+{
+  "likes": [
+    "code",
+    null,
+    "meat"
+  ]
+}
+```
+
 ## [Changelog](CHANGELOG.md)
 
 ## Todo
 
 This whole projet (up to v2.0.1, from idea to this README) was done in 1 hour, so there is some missing features in this implementation (if you can call 3 line of codes an implementation):
 
-- [ ] make the output valid javascript
 - [ ] add color highlighting
-- [ ] ungron should be able to better unflatten arrays
 
 
 ## Credits

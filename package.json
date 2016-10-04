@@ -19,8 +19,8 @@
     ]
   },
   "scripts": {
-    "test": "mocha $(find src -name '*.test.js')",
-    "test-watch": "mocha -w $(find src -name '*.test.js')",
+    "test": "mocha $(find bin -name '*.test.js')",
+    "test-watch": "mocha -w $(find bin -name '*.test.js')",
     "test-coverage": "nyc --all --statements=100 --lines=100 --functions=90 --branches=70 --check-coverage --reporter=lcov --reporter=cobertura --report-dir=coverage -- mocha -R spec -t 100000 $(find src -name '*.test.js')",
     "send-coverage": "cat ./coverage/lcov.info | coveralls",
     "update": "updtr",
@@ -43,6 +43,7 @@
     "curl"
   ],
   "devDependencies": {
+    "chai": "^3.5.0",
     "conventional-changelog": "^1.1.0",
     "conventional-changelog-cli": "^1.2.0",
     "coveralls": "^2.11.12",
@@ -52,7 +53,8 @@
   },
   "dependencies": {
     "flat": "^2.0.1",
-    "json5": "^0.5.0"
+    "json5": "^0.5.0",
+    "lodash": "^4.16.3"
   },
   "license": "MIT"
 }
