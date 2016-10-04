@@ -103,6 +103,8 @@ Install with [npm](https://npmjs.org/package/gron).
 
 ## Todo
 
+This whole projet (up to v2.0.1, from idea to this README) was done in 1 hour, so there is some missing features in this implementation (if you can call 3 line of codes an implementation):
+
 - [ ] make the output valid javascript
 - [ ] add color highlighting
 - [ ] ungron should be able to better unflatten arrays
