@@ -6,7 +6,8 @@
     "node": "6"
   },
   "bin": {
-    "gron": "bin/gron.js"
+    "gron": "bin/gron.js",
+    "ungron": "bin/ungron.js"
   },
   "nyc": {
     "exclude": [
