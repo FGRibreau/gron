@@ -1,0 +1,9 @@
+{
+    "name": "FGRibreau",
+    "github": "https://github.com/fgribreau/",
+    "likes": ["code", "cheese", "meat"],
+    "contact": {
+        "email": "github@fgribreau.com",
+        "twitter": "@FGRibreau"
+    }
+}

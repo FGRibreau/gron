@@ -17,10 +17,6 @@ Make JSON greppable!
 
 > gron transforms JSON into discrete assignments to make it easier to grep for what you want and see the absolute 'path' to it. It eases the exploration of APIs that return large blobs of JSON but have terrible documentation.
 
-The module is entirely inspired by [tomnomnom/gron](https://github.com/tomnomnom/gron) but instead of reinventing the wheel it relies on nodejs+[flat](https://github.com/hughsk/flat).
-
-### Usage
-
 ```
 ▶ curl -s https://jsonplaceholder.typicode.com/users | gron | fgrep "company.name"
 "0.company.name":"Romaguera-Crona",
@@ -35,6 +31,68 @@ The module is entirely inspired by [tomnomnom/gron](https://github.com/tomnomnom
 "9.company.name":"HoegerLLC",
 ```
 
+gron can work backwards too, enabling you to turn your filtered data back into JSON:
+
+
+```
+▶ curl -s https://jsonplaceholder.typicode.com/users | gron | fgrep "company.name" | ungron
+{
+  "0": {
+    "company": {
+      "name": "Romaguera-Crona"
+    }
+  },
+  "1": {
+    "company": {
+      "name": "Deckow-Crist"
+    }
+  },
+  ...
+```
+
+### Usage
+
+Get JSON from a file:
+
+```
+▶ cat testdata/two.json | gron
+"name":"FGRibreau",
+"github":"https://github.com/fgribreau/",
+"likes.0":"code",
+"likes.1":"cheese",
+"likes.2":"meat",
+"contact.email":"github@fgribreau.com",
+"contact.twitter":"@FGRibreau"
+```
+
+From a URL:
+
+```
+▶ curl -s http://headers.jsontest.com/ | gron
+"X-Cloud-Trace-Context":"b6d337804e0580c0afb5660041b23c2f/12840214282269023716",
+"Host":"headers.jsontest.com",
+"User-Agent":"curl/7.43.0",
+"Accept":"*/*"
+```
+
+Grep for something and easily see the path to it:
+
+```
+▶ cat testdata/two.json | gron
+"contact.twitter":"@FGRibreau"
+```
+
+gron makes diffing JSON easy too:
+
+```
+▶ diff <(cat two.json | gron) <(cat two-b.json | gron)
+7c7
+< "contact.twitter":"@FGRibreau"
+---
+> "contact.twitter":"@fgribreau"
+```
+
+
 ## Installation
 
 Install with [npm](https://npmjs.org/package/gron).
@@ -42,6 +100,17 @@ Install with [npm](https://npmjs.org/package/gron).
     npm install -g gron
 
 ## [Changelog](CHANGELOG.md)
+
+## Todo
+
+- [ ] make the output valid javascript
+- [ ] add color highlighting
+- [ ] ungron should be able to better unflatten arrays
+
+
+## Credits
+
+This module is entirely inspired by [tomnomnom/gron](https://github.com/tomnomnom/gron) but instead of reinventing the wheel it relies on nodejs+[flat](https://github.com/hughsk/flat).
 
 ## You want to support my work?
 
