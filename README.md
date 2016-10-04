@@ -6,11 +6,12 @@
 
 <!-- [![Build Status](https://img.shields.io/circleci/project/FGRibreau/gron.svg)](https://circleci.com/gh/FGRibreau/gron/) [![Coverage Status](https://img.shields.io/coveralls/FGRibreau/gron/master.svg)](https://coveralls.io/github/FGRibreau/gron?branch=master)  -->
 
-[![Deps](	https://img.shields.io/david/FGRibreau/gron.svg)](https://david-dm.org/FGRibreau/gron) [![NPM version](https://img.shields.io/npm/v/gron.svg)](http://badge.fury.io/js/gron) [![Downloads](http://img.shields.io/npm/dm/gron.svg)](https://www.npmjs.com/package/gron)
+[![Deps](	https://img.shields.io/david/FGRibreau/gron.svg)](https://david-dm.org/FGRibreau/gron) [![NPM version](https://img.shields.io/npm/v/gron.svg)](http://badge.fury.io/js/gron)
+<!-- [![Downloads](http://img.shields.io/npm/dm/gron.svg)](https://www.npmjs.com/package/gron) -->
 
 [![available-for-advisory](https://img.shields.io/badge/available%20for%20consulting%20advisory-yes-ff69b4.svg?)](http://bit.ly/2c7uFJq) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
 
-![NPM](https://nodei.co/npm/gron.png?downloadRank=true) ![NPM](https://nodei.co/npm-dl/gron.png?months=3&height=2)
+<!-- ![NPM](https://nodei.co/npm/gron.png?downloadRank=true) ![NPM](https://nodei.co/npm-dl/gron.png?months=3&height=2) -->
 
 Make JSON greppable!
 
