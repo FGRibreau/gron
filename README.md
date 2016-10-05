@@ -81,9 +81,9 @@ From a URL:
 ```
 ▶ curl -s http://headers.jsontest.com/ | gron
 json = {};
-json.X-Cloud-Trace-Context = "e6bb50fada05a9f8152091463863382a/4805449055235230110";
+json["X-Cloud-Trace-Context"] = "e76953d4e0a7a4c00a60d3d8329d0236/11387270255695883695";
 json.Host = "headers.jsontest.com";
-json.User-Agent = "curl/7.43.0";
+json["User-Agent"] = "curl/7.43.0";
 json.Accept = "*/*";
 ```
 
@@ -97,7 +97,7 @@ json.contact.twitter = "@FGRibreau";
 gron makes diffing JSON easy too:
 
 ```
-▶ diff <(cat two.json | gron) <(cat two-b.json | gron)
+▶ diff <(cat testdata/two.json | gron) <(cat testdata/two-b.json | gron)
 10c10
 < json.contact.twitter = "@FGRibreau";
 ---
@@ -109,7 +109,7 @@ The output of gron is valid JavaScript:
 ```
 ▶ cat testdata/two.json | gron > tmp.js
 ▶ echo "console.log(json);" >> tmp.js
-▶ nodejs tmp.js
+▶ node tmp.js
 { name: 'FGRibreau',
   github: 'https://github.com/fgribreau/',
   likes: [ 'code', 'cheese', 'meat' ],
@@ -153,11 +153,11 @@ This means you use can use gron with grep and other tools to modify JSON:
 To preserve array keys, arrays are padded with null when values are missing:
 
 ```
-▶ cat testdata/two.json | gron | grep likes | grep -v cheese
+▶ cat testdata/two.json | gron | grep likes | grep -v cheese
 json.likes = [];
 json.likes[0] = "code";
 json.likes[2] = "meat";
-▶ cat testdata/two.json | gron | grep likes | grep -v cheese | ungron
+▶ cat testdata/two.json | gron | grep likes | grep -v cheese | ungron
 {
   "likes": [
     "code",

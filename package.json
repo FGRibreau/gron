@@ -52,9 +52,8 @@
     "updtr": "^0.2.1"
   },
   "dependencies": {
-    "flat": "^2.0.1",
-    "json5": "^0.5.0",
-    "lodash": "^4.16.3"
+    "lodash": "^4.16.3",
+    "traverse": "^0.6.6"
   },
   "license": "MIT"
 }
