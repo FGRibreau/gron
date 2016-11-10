@@ -1,3 +1,37 @@
+<a name="4.1.0"></a>
+# 4.1.0 (2016-11-10)
+
+* allow using node 6+ ([90c818d](https://github.com/fgribreau/gron/commit/90c818d))
+* Release v4.1.0. ([d536597](https://github.com/fgribreau/gron/commit/d536597))
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0 (2016-10-05)
+
+* fix(gron/ungron): full support for key names, no sentinel, better ungron, less code ([90dec62](https://github.com/fgribreau/gron/commit/90dec62))
+* Release v4.0.0. ([7c6ac84](https://github.com/fgribreau/gron/commit/7c6ac84))
+
+
+
+<a name="3.0.1"></a>
+## 3.0.1 (2016-10-04)
+
+* fix(gron) ([21b6047](https://github.com/fgribreau/gron/commit/21b6047))
+* Release v3.0.1. ([957a38e](https://github.com/fgribreau/gron/commit/957a38e))
+
+
+
+<a name="3.0.0"></a>
+# 3.0.0 (2016-10-04)
+
+* docs(readme) ([0fc4723](https://github.com/fgribreau/gron/commit/0fc4723))
+* Release v3.0.0. ([8735f1d](https://github.com/fgribreau/gron/commit/8735f1d))
+* feat(gron): add compatibility with the original gron (js output and better ungron) ([3779fce](https://github.com/fgribreau/gron/commit/3779fce))
+* docs(changelog): updated ([127dda5](https://github.com/fgribreau/gron/commit/127dda5))
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1 (2016-10-04)
 
