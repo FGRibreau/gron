@@ -1,3 +1,12 @@
+<a name="4.1.1"></a>
+## 4.1.1 (2016-11-10)
+
+* fix(package) ([4096b37](https://github.com/fgribreau/gron/commit/4096b37))
+* Release v4.1.1. ([068b764](https://github.com/fgribreau/gron/commit/068b764))
+* docs(changelog): updated ([86d5c63](https://github.com/fgribreau/gron/commit/86d5c63))
+
+
+
 <a name="4.1.0"></a>
 # 4.1.0 (2016-11-10)
 
