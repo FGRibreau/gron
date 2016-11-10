@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "engines": {
-    "node": "6"
+    "node": ">6"
   },
   "bin": {
     "gron": "bin/gron.js",
