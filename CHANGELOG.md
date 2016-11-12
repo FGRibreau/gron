@@ -1,3 +1,12 @@
+<a name="4.2.0"></a>
+# 4.2.0 (2016-11-12)
+
+* Release v4.2.0. ([735f8c7](https://github.com/fgribreau/gron/commit/735f8c7))
+* Use strict mode for node v4 ([9303af9](https://github.com/fgribreau/gron/commit/9303af9))
+* docs(changelog): updated ([0157dec](https://github.com/fgribreau/gron/commit/0157dec))
+
+
+
 <a name="4.1.1"></a>
 ## 4.1.1 (2016-11-10)
 
