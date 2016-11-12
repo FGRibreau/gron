@@ -1,6 +1,6 @@
 {
   "name": "gron",
-  "version": "4.1.1",
+  "version": "4.2.0",
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
   "engines": {
     "node": ">=6"
