@@ -12,7 +12,9 @@ function gronToObject(str) {
 
   // setup sandbox
   _.compact(str.trim().split('\n')).reduce((obj, line) => {
-    const [rawKey, rawValue]  = line.split('=');
+    const splitLine = line.split('=');
+    const rawKey = splitLine[0];
+    const rawValue = splitLine[1];
     return _.set(obj, rawKey.trim(), null);
   }, sandbox);
 
