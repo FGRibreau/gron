@@ -52,7 +52,7 @@ gron can work backwards too, enabling you to turn your filtered data back into J
 ```
 ## You like this?
 
-If you like Gron, you will find [jq.node](https://github.com/FGRibreau/jq.node) awesome! jq.node is JavaScript and Lodash in your shell!
+If you like Gron, you will find [jq.node](https://github.com/FGRibreau/jq.node) awesome :rocket:! jq.node is JavaScript and Lodash in your shell!
 
 ## Installation
 
