@@ -1,3 +1,13 @@
+<a name="4.3.0"></a>
+# 4.3.0 (2016-11-15)
+
+* Release v4.3.0. ([dab0ba6](https://github.com/fgribreau/gron/commit/dab0ba6))
+* support node 4 ([82e073a](https://github.com/fgribreau/gron/commit/82e073a))
+* Update README.md ([01c3517](https://github.com/fgribreau/gron/commit/01c3517))
+* docs(changelog): updated ([d8cd602](https://github.com/fgribreau/gron/commit/d8cd602))
+
+
+
 <a name="4.2.0"></a>
 # 4.2.0 (2016-11-12)
 
