@@ -173,9 +173,9 @@ json.likes[2] = "meat";
 
 ## Todo
 
-This whole projet (up to v2.0.1, from idea to this README) was done in 1 hour, so there is some missing features in this implementation (if you can call 3 line of codes an implementation):
+This whole project (up to v2.0.1, from idea to this README) was done in 1 hour, so there is some missing features in this implementation (if you can call 3 line of codes an implementation).
 
-- [ ] add color highlighting
+- [ ] stream support (large file support)
 
 
 ## Credits
