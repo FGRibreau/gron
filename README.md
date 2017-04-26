@@ -2,7 +2,7 @@
   <br><p><strong>gron</strong> - Make JSON greppable!.</p>
 </div>
 
-=========================================
+-----------------------------------------------------
 
 <!-- [![Build Status](https://img.shields.io/circleci/project/FGRibreau/gron.svg)](https://circleci.com/gh/FGRibreau/gron/) [![Coverage Status](https://img.shields.io/coveralls/FGRibreau/gron/master.svg)](https://coveralls.io/github/FGRibreau/gron?branch=master)  -->
 
