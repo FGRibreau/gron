@@ -171,6 +171,13 @@ json.likes[2] = "meat";
 
 ## [Changelog](CHANGELOG.md)
 
+## ❤️ Shameless plug
+
+- [**Charts, simple as a URL**. No more server-side rendering pain, 1 url = 1 chart](https://image-charts.com)
+- [Looking for a free **Redis GUI**?](https://www.redsmin.com) [Or for **real-time alerting** & monitoring for Redis?](http://redsmin.com)
+- [**Mailpopin**](https://mailpop.in/) - **Stripe** payment emails you can actually use
+
+
 ## Todo
 
 This whole project (up to v2.0.1, from idea to this README) was done in 1 hour, so there is some missing features in this implementation (if you can call 3 line of codes an implementation).
