@@ -47,7 +47,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "conventional-changelog": "^1.1.0",
-    "conventional-changelog-cli": "^1.2.0",
+    "conventional-changelog-cli": "^2.0.31",
     "coveralls": "^2.11.12",
     "mocha": "^3.0.1",
     "nyc": "^8.1.0",
