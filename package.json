@@ -45,7 +45,7 @@
     "curl"
   ],
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.2.0",
     "conventional-changelog": "^1.1.0",
     "conventional-changelog-cli": "^1.2.0",
     "coveralls": "^2.11.12",
