@@ -9,7 +9,7 @@
 [![Deps](	https://img.shields.io/david/FGRibreau/gron.svg)](https://david-dm.org/FGRibreau/gron) [![NPM version](https://img.shields.io/npm/v/gron.svg)](http://badge.fury.io/js/gron)
 <!-- [![Downloads](http://img.shields.io/npm/dm/gron.svg)](https://www.npmjs.com/package/gron) -->
 
-[![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/francois-guillaume-ribreau?utm_source=github&utm_medium=button&utm_term=francois-guillaume-ribreau&utm_campaign=github) [![available-for-advisory](https://img.shields.io/badge/available%20for%20consulting%20advisory-yes-ff69b4.svg?)](http://bit.ly/2c7uFJq) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
+[![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/francois-guillaume-ribreau?utm_source=github&utm_medium=button&utm_term=francois-guillaume-ribreau&utm_campaign=github) [![available-for-advisory](https://img.shields.io/badge/available%20for%20consulting%20advisory-yes-ff69b4.svg?)](http://bit.ly/2c7uFJq) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg) [![Slack](https://img.shields.io/badge/Slack-Join%20our%20tech%20community-17202A?logo=slack)](https://join.slack.com/t/fgribreau/shared_invite/zt-edpjwt2t-Zh39mDUMNQ0QOr9qOj~jrg)
 
 <!-- ![NPM](https://nodei.co/npm/gron.png?downloadRank=true) ![NPM](https://nodei.co/npm-dl/gron.png?months=3&height=2) -->
 
