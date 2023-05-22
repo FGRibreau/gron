@@ -173,9 +173,9 @@ json.likes[2] = "meat";
 
 ## ❤️ Shameless plug
 
+- [Open-Source self-hostable or fully-managed **webhook as a service**](https://www.hook0.com/)
+- [Looking for a managed Keycloak IAM ?](https://www.cloud-iam.com/)
 - [**Charts, simple as a URL**. No more server-side rendering pain, 1 url = 1 chart](https://image-charts.com)
-- [Looking for a free **Redis GUI**?](https://www.redsmin.com) [Or for **real-time alerting** & monitoring for Redis?](http://redsmin.com)
-- [**Mailpopin**](https://mailpop.in/) - **Stripe** payment emails you can actually use
 
 
 ## Todo
